@@ -1,2 +1,4 @@
 Flask<1
 applicationinsights
+sqlalchemy-migrate
+Flask-SQLAlchemy

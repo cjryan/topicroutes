@@ -18,7 +18,7 @@
     <PythonWsgiHandler>$(MSBuildProjectName).app</PythonWsgiHandler>
     <Name>topicserver</Name>
     <RootNamespace>topicserver</RootNamespace>
-    <InterpreterId>{a88f21c0-bb2a-4a61-8362-39e8e717b1f2}</InterpreterId>
+    <InterpreterId>{8f280b33-21eb-497d-a3fd-cf1941faa2c5}</InterpreterId>
     <InterpreterVersion>3.4</InterpreterVersion>
     <NameOfLastUsedPublishProfile>topicroutes - Web Deploy</NameOfLastUsedPublishProfile>
   </PropertyGroup>
@@ -74,11 +74,11 @@
     <Content Include="topicserver\templates\layout.html" />
   </ItemGroup>
   <ItemGroup>
-    <Interpreter Include="env1\">
-      <Id>{a88f21c0-bb2a-4a61-8362-39e8e717b1f2}</Id>
+    <Interpreter Include="env\">
+      <Id>{8f280b33-21eb-497d-a3fd-cf1941faa2c5}</Id>
       <BaseInterpreter>{2af0f10d-7135-4994-9156-5d01c9c11b7e}</BaseInterpreter>
       <Version>3.4</Version>
-      <Description>env1 (Python 3.4)</Description>
+      <Description>env (Python 3.4)</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <LibraryPath>Lib\</LibraryPath>
