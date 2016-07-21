@@ -32,6 +32,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="runserver.py" />
+    <Compile Include="topicserver\config.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="topicserver\models.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="topicserver\__init__.py" />
     <Compile Include="topicserver\views.py" />
   </ItemGroup>

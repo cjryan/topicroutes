@@ -3,6 +3,10 @@ The flask application package.
 """
 
 from flask import Flask
-app = Flask(__name__)
+from flask_sqlalchemy import SQLAlchemy
 
-import topicserver.views
+app = Flask(__name__)
+app.config.from_object('topicserver.config')
+db = SQLAlchemy(app)
+
+from topicserver import views, models
