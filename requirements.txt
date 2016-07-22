@@ -2,3 +2,8 @@ Flask<1
 applicationinsights
 sqlalchemy-migrate
 Flask-SQLAlchemy
+Flask-WTF
+Flask-Security
+Flask-Login
+Flask-Principal
+Flask-Admin
