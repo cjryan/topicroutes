@@ -18,7 +18,7 @@
     <PythonWsgiHandler>$(MSBuildProjectName).app</PythonWsgiHandler>
     <Name>topicserver</Name>
     <RootNamespace>topicserver</RootNamespace>
-    <InterpreterId>{a88f21c0-bb2a-4a61-8362-39e8e717b1f2}</InterpreterId>
+    <InterpreterId>{843bd23d-427d-4cae-8617-d457c52cbf2b}</InterpreterId>
     <InterpreterVersion>3.4</InterpreterVersion>
     <NameOfLastUsedPublishProfile>topicroutes - Web Deploy</NameOfLastUsedPublishProfile>
   </PropertyGroup>
@@ -31,7 +31,18 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="db_create.py" />
+    <Compile Include="db_migrate.py" />
     <Compile Include="runserver.py" />
+    <Compile Include="topicserver\admin.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="topicserver\config.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="topicserver\models.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="topicserver\__init__.py" />
     <Compile Include="topicserver\views.py" />
   </ItemGroup>
@@ -42,9 +53,34 @@
     <Folder Include="topicserver\static\fonts\" />
     <Folder Include="topicserver\static\scripts\" />
     <Folder Include="topicserver\templates\" />
+    <Folder Include="topicserver\templates\security\" />
+    <Folder Include="topicserver\templates\security\email\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
+    <Content Include="topicserver\templates\security\.DS_Store" />
+    <Content Include="topicserver\templates\security\change_password.html" />
+    <Content Include="topicserver\templates\security\email\change_notice.html" />
+    <Content Include="topicserver\templates\security\email\change_notice.txt" />
+    <Content Include="topicserver\templates\security\email\confirmation_instructions.html" />
+    <Content Include="topicserver\templates\security\email\confirmation_instructions.txt" />
+    <Content Include="topicserver\templates\security\email\login_instructions.html" />
+    <Content Include="topicserver\templates\security\email\login_instructions.txt" />
+    <Content Include="topicserver\templates\security\email\reset_instructions.html" />
+    <Content Include="topicserver\templates\security\email\reset_instructions.txt" />
+    <Content Include="topicserver\templates\security\email\reset_notice.html" />
+    <Content Include="topicserver\templates\security\email\reset_notice.txt" />
+    <Content Include="topicserver\templates\security\email\welcome.html" />
+    <Content Include="topicserver\templates\security\email\welcome.txt" />
+    <Content Include="topicserver\templates\security\forgot_password.html" />
+    <Content Include="topicserver\templates\security\login_user.html" />
+    <Content Include="topicserver\templates\security\register_user.html" />
+    <Content Include="topicserver\templates\security\reset_password.html" />
+    <Content Include="topicserver\templates\security\send_confirmation.html" />
+    <Content Include="topicserver\templates\security\send_login.html" />
+    <Content Include="topicserver\templates\security\_macros.html" />
+    <Content Include="topicserver\templates\security\_menu.html" />
+    <Content Include="topicserver\templates\security\_messages.html" />
     <None Include="topicroutes - Web Deploy.pubxml" />
     <Content Include="topicserver\static\content\bootstrap.css" />
     <Content Include="topicserver\static\content\bootstrap.min.css" />
@@ -74,11 +110,11 @@
     <Content Include="topicserver\templates\layout.html" />
   </ItemGroup>
   <ItemGroup>
-    <Interpreter Include="env1\">
-      <Id>{a88f21c0-bb2a-4a61-8362-39e8e717b1f2}</Id>
+    <Interpreter Include="env\">
+      <Id>{843bd23d-427d-4cae-8617-d457c52cbf2b}</Id>
       <BaseInterpreter>{2af0f10d-7135-4994-9156-5d01c9c11b7e}</BaseInterpreter>
       <Version>3.4</Version>
-      <Description>env1 (Python 3.4)</Description>
+      <Description>env (Python 3.4)</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <LibraryPath>Lib\</LibraryPath>
