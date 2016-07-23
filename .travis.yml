@@ -5,6 +5,6 @@ install:
     - pip install -r TopicRoutes/requirements.txt
     - pip install coveralls
 script: 
-    coverage run TopicRoutes/manage.py test
+    cd TopicRoutes && coverage run manage.py test
 after_success: 
     coveralls
