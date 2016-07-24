@@ -1,0 +1,10 @@
+language: python
+python:
+    - "3.4"
+install:
+    - pip install -r TopicRoutes/requirements.txt
+    - pip install coveralls
+script: 
+    cd TopicRoutes && coverage run manage.py test
+after_success: 
+    coveralls
