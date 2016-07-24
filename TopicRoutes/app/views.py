@@ -3,9 +3,13 @@ Definition of views.
 """
 
 from django.shortcuts import render
-from django.http import HttpRequest
+from django.http import HttpRequest, HttpResponseRedirect
 from django.template import RequestContext
 from datetime import datetime
+from django.views.generic import View
+from django.core.urlresolvers import reverse
+
+from .forms import ContactForm
 
 def home(request):
     """Renders the home page."""
@@ -15,19 +19,6 @@ def home(request):
         'app/index.html',
         {
             'title':'Home Page',
-            'year':datetime.now().year,
-        }
-    )
-
-def contact(request):
-    """Renders the contact page."""
-    assert isinstance(request, HttpRequest)
-    return render(
-        request,
-        'app/contact.html',
-        {
-            'title':'Contact',
-            'message':'Your contact page.',
             'year':datetime.now().year,
         }
     )
@@ -44,3 +35,33 @@ def about(request):
             'year':datetime.now().year,
         }
     )
+
+class ContactSuccessView(View):
+    template_name = 'contact/success.html'
+    def get(self, request, *args, **kargs):
+        return render(
+            request,
+            self.template_name,
+            {
+                'title': 'Contact Success',
+                'message': 'Thank you for your interest, we will be in touch.',
+                'year': datetime.now().year,
+            }
+        )
+
+class ContactFormView(View):
+    form_class = ContactForm
+    template_name = 'contact/contact.html'
+
+    def get(self, request, *args, **kargs):
+        form = self.form_class()
+        return render(request, self.template_name, {'form': form})
+
+    def post(self, request, *args, **kwargs):
+        form = self.form_class(request.POST)
+        if form.is_valid():
+            form.save()
+            #TODO send a registration email.
+            return HttpResponseRedirect(reverse('contact_success'))
+        return render(request, self.template_name, {'form': form})
+
