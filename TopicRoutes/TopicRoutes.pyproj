@@ -4,7 +4,7 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <Name>TopicRoutes</Name>
     <RootNamespace>TopicRoutes</RootNamespace>
-    <InterpreterId>{87537d6c-dbd4-4288-adb7-59f2d294045a}</InterpreterId>
+    <InterpreterId>{1aefa456-1556-4018-96d8-dfdc5cfd643b}</InterpreterId>
     <InterpreterVersion>3.4</InterpreterVersion>
     <NameOfLastUsedPublishProfile>topicroutes - Web Deploy</NameOfLastUsedPublishProfile>
     <DjangoSettingsModule>$(MSBuildProjectName).settings.local</DjangoSettingsModule>
@@ -64,40 +64,22 @@
     <Folder Include="app\templates\" />
     <Folder Include="app\templates\app\" />
     <Folder Include="app\templates\contact\" />
+    <Folder Include="requirements\" />
     <Folder Include="TopicRoutes\" />
     <Folder Include="TopicRoutes\settings\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\templates\contact\success.html" />
-    <Content Include="requirements.txt" />
-    <Content Include="app\static\app\content\bootstrap.css" />
-    <Content Include="app\static\app\content\bootstrap.min.css" />
     <Content Include="app\static\app\content\site.css" />
-    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="app\static\app\scripts\bootstrap.js" />
-    <Content Include="app\static\app\scripts\bootstrap.min.js" />
-    <Content Include="app\static\app\scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="app\static\app\scripts\jquery-1.10.2.js" />
-    <Content Include="app\static\app\scripts\jquery-1.10.2.min.js" />
-    <Content Include="app\static\app\scripts\jquery-1.10.2.min.map" />
-    <Content Include="app\static\app\scripts\jquery.validate-vsdoc.js" />
-    <Content Include="app\static\app\scripts\jquery.validate.js" />
-    <Content Include="app\static\app\scripts\jquery.validate.min.js" />
-    <Content Include="app\static\app\scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="app\static\app\scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="app\static\app\scripts\modernizr-2.6.2.js" />
-    <Content Include="app\static\app\scripts\respond.js" />
-    <Content Include="app\static\app\scripts\respond.min.js" />
-    <Content Include="app\static\app\scripts\_references.js" />
     <Content Include="app\templates\app\about.html" />
     <Content Include="app\templates\contact\contact.html" />
     <Content Include="app\templates\app\index.html" />
     <Content Include="app\templates\app\layout.html" />
     <Content Include="app\templates\app\login.html" />
     <Content Include="app\templates\app\loginpartial.html" />
+    <Content Include="requirements\base.txt" />
+    <Content Include="requirements\dev.txt" />
+    <Content Include="requirements\prod.txt" />
     <Content Include="web.config" />
     <None Include="topicroutes - Web Deploy.pubxml" />
   </ItemGroup>
@@ -108,7 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
-      <Id>{87537d6c-dbd4-4288-adb7-59f2d294045a}</Id>
+      <Id>{1aefa456-1556-4018-96d8-dfdc5cfd643b}</Id>
       <BaseInterpreter>{2af0f10d-7135-4994-9156-5d01c9c11b7e}</BaseInterpreter>
       <Version>3.4</Version>
       <Description>env (Python 3.4)</Description>
