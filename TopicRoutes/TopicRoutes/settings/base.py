@@ -110,3 +110,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
+
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
