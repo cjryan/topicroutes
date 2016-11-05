@@ -5,7 +5,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import com.codestrokes.model.Reference;
 
-@RepositoryRestResource(collectionResourceRel="reference", path="reference")
+@RepositoryRestResource(collectionResourceRel="references", path="references")
 public interface ReferenceRepository extends PagingAndSortingRepository<Reference, Long>{
 
 }
