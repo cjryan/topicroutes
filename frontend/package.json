@@ -1,0 +1,30 @@
+{
+  "name": "learn-on-purpose",
+  "version": "0.1.0",
+  "description": "Research organization tool",
+  "main": "index.js",
+  "dependencies": {
+    "elm": "^0.17.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/JeremyLWright/topicroutes.git"
+  },
+  "keywords": [
+    "research",
+    "zotero",
+    "citation",
+    "cite",
+    "reference"
+  ],
+  "author": "Jeremy Wright & Chris Ryan",
+  "license": "CC-BY-3.0",
+  "bugs": {
+    "url": "https://github.com/JeremyLWright/topicroutes/issues"
+  },
+  "homepage": "https://github.com/JeremyLWright/topicroutes#readme"
+}
