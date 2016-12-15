@@ -1,4 +1,4 @@
-package com.codestrokes;
+package com.learnonpurpose;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
