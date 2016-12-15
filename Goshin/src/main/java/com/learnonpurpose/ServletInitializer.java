@@ -1,4 +1,4 @@
-package com.codestrokes;
+package com.learnonpurpose;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;

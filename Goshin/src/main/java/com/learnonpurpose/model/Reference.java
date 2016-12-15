@@ -1,4 +1,4 @@
-package com.codestrokes.model;
+package com.learnonpurpose.model;
 
 import java.net.URI;
 import java.util.Date;
