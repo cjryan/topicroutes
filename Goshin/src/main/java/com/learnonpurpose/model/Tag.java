@@ -15,4 +15,20 @@ public class Tag extends ITemporal {
 	
 	@ManyToMany(mappedBy= "tags")
 	Set<Note> notes;
+
+	public String getTag() {
+		return tag;
+	}
+
+	public void setTag(String tag) {
+		this.tag = tag;
+	}
+
+	public Set<Note> getNotes() {
+		return notes;
+	}
+
+	public void setNotes(Set<Note> notes) {
+		this.notes = notes;
+	}
 }
