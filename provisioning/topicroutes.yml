@@ -1,0 +1,12 @@
+---
+- hosts: all
+  remote_user: root
+  gather_facts: no
+  pre_tasks:
+    - name: 'install python2'
+      raw: sudo dnf -y install python2 python2-dnf
+  tasks:
+    - name: install maven
+      dnf:
+        name: maven
+      become: true
